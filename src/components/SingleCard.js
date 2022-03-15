@@ -3,7 +3,9 @@ import "./SingleCard.css";
 
 const SingleCard = (props) => {
   const handleClick = () => {
-    props.handleChoice(props.card);
+    if (!props.disabled) {
+      props.handleChoice(props.card);
+    }
   };
   return (
     <div className="card">
