@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SingleCard.css";
 
 const SingleCard = (props) => {
@@ -7,7 +7,7 @@ const SingleCard = (props) => {
   };
   return (
     <div className="card">
-      <div>
+      <div className={props.flipped ? "flipped" : ""}>
         <img className="front" src={props.card.src} alt="card front" />
         <img
           className="back"
